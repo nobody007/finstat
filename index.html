@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Statistics (금융통계)</title>
+<style>
+  :root {
+    --navy: #1a2f4b;
+    --navy-dark: #0f1d30;
+    --accent: #8a6d3b;
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --border: #e3e1db;
+    --text: #24262b;
+    --text-muted: #5c6068;
+    --radius: 6px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Georgia", "Nanum Myeongjo", "Apple SD Gothic Neo", "Malgun Gothic", serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header.site-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: #f2f2f0;
+    padding: 3.5rem 1.5rem 3rem;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    color: #c9b98a;
+    margin: 0 0 0.75rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  header.site-header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  header.site-header p.subtitle {
+    margin: 0.9rem 0 0;
+    color: #cfd4dc;
+    font-size: 1rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  nav.top-nav {
+    margin-top: 1.75rem;
+  }
+
+  nav.top-nav a {
+    display: inline-block;
+    color: #f2f2f0;
+    text-decoration: none;
+    border: 1px solid rgba(242,242,240,0.4);
+    padding: 0.55rem 1.4rem;
+    border-radius: var(--radius);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  nav.top-nav a:hover {
+    background: rgba(242,242,240,0.12);
+    border-color: #c9b98a;
+  }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  section.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem 2rem;
+    margin-bottom: 1.75rem;
+    box-shadow: 0 1px 3px rgba(15, 29, 48, 0.04);
+  }
+
+  section.card h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--navy);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  section.card p.section-note {
+    margin: 0 0 1.1rem;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  ul.resource-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.resource-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  ul.resource-list li:last-child {
+    border-bottom: none;
+  }
+
+  .badge {
+    flex: none;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--navy);
+    background: #eef1f5;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.18rem 0.45rem;
+    min-width: 2.4rem;
+    text-align: center;
+  }
+
+  ul.resource-list a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  ul.resource-list a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    color: var(--text-muted);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+  }
+
+  footer a {
+    color: var(--navy);
+  }
+
+  @media (max-width: 600px) {
+    header.site-header h1 { font-size: 1.9rem; }
+    section.card { padding: 1.4rem 1.3rem; }
+  }
+
+  section.card p { margin: 0 0 0.8rem; }
+  section.card ul.plain { margin: 0 0 0.4rem; padding-left: 1.2rem; }
+  section.card ul.plain li { margin: 0.25rem 0; }
+  section.card h3 { margin: 1.1rem 0 0.3rem; font-size: 1rem; color: var(--navy); font-family: "Helvetica Neue", Arial, sans-serif; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Undergraduate Course</p>
+  <h1>Financial Statistics</h1>
+  <p class="subtitle">금융통계 &nbsp;·&nbsp; Instructor: <a href="mailto:josong@ewha.ac.kr" style="color:inherit">Jongwoo Song</a> &nbsp;·&nbsp; Portfolio Theory · Futures &amp; Options · Binomial Model · Black–Scholes</p>
+  <nav class="top-nav">
+    <a href="courseinfo.html">Course Information</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="card" id="materials">
+    <h2>Lecture Slides</h2>
+    <p class="section-note">Textbook: M. Capiński &amp; T. Zastawniak, Mathematics for Finance: An Introduction to Financial Engineering</p>
+    <ul class="resource-list">
+      <li><span class="badge">PDF</span><a href="Finance_Ch1_Simple_Market_Model.pdf">1장 단순시장모형 (무재정 원리, 이항모형, 선도계약, 콜/풋 옵션과 복제, Put-Call Parity)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch2_Risk_Free_Assets.pdf">2장 무위험자산 (금전의 시간가치, 무이표채권, 이표채권, 자금시장계정)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch3_Portfolio_Management.pdf">3장 포트폴리오 관리 (위험과 수익, 효율적 투자선, 시장포트폴리오와 CML, CAPM)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch4_Forward_and_Futures.pdf">4장 선도계약과 선물계약 (선도가격, 선도계약의 가치, 일일정산, 증거금과 마진콜, 선물가격)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch5_Options.pdf">5장 옵션 (유럽식/미국식, Put-Call Parity, 가격의 일반적 성질, 가격 결정 변수, 시간가치)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch6_Binomial_Model.pdf">6장 이항모형 (위험중립확률, 두 단계 모형과 헤징, n단계 모형, 미국식 풋옵션)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch7_Continuous_Time.pdf">7장 연속시간모형 (Black–Scholes 공식, 델타헤징, Greeks, Value-at-Risk)</a></li>
+    </ul>
+  </section>
+
+  <section class="card" id="exercises">
+    <h2>Exercises</h2>
+    <p class="section-note">장별 연습문제 (모범답안은 수업 시간에 다룹니다)</p>
+    <ul class="resource-list">
+      <li><span class="badge">PDF</span><a href="Finance_Ch1_Exercises.pdf">1장 연습문제 — 단순시장모형 (7문항)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch2_Exercises.pdf">2장 연습문제 — 무위험자산 (8문항)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch3_Exercises.pdf">3장 연습문제 — 포트폴리오 관리 (8문항)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch4_Exercises.pdf">4장 연습문제 — 선도계약과 선물계약 (8문항)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch5_Exercises.pdf">5장 연습문제 — 옵션 (8문항)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch6_Exercises.pdf">6장 연습문제 — 이항모형 (8문항)</a></li>
+      <li><span class="badge">PDF</span><a href="Finance_Ch7_Exercises.pdf">7장 연습문제 — 연속시간모형 (8문항)</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>Financial Statistics &middot; <a href="courseinfo.html">Course Information</a></p>
+</footer>
+
+</body>
+</html>
